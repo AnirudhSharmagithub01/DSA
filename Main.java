@@ -37,7 +37,18 @@ class Main {
   }
 
   public static Node<Integer> insert(Node<Integer> head,int element,int position){
-    
+    if(head == null && head.next == null){
+      return head;
+    }
+    if(position == 0){
+      Node<Integer> newNode = new Node<Integer>(element);
+      newNode.next = head;
+      return newNode;
+    }
+    else{
+      head.next = insert(head.next,element,position - 1);
+      return head;
+    }
   }
 
 
