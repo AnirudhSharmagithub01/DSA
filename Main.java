@@ -53,7 +53,7 @@ class Main {
 
   public static void main(String[] args) {
     Node<Integer> head = takinginput();
-    head = insert(head,10,10);
+    head = insert(head,10,8);
     print(head);    
   }
 
